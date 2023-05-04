@@ -3,11 +3,8 @@ import MovieResult from "./MovieResult";
 
 const Movielist = ({movies, setWatchlist, watchlist}) => {
 
-//movies = [{1}, {2}, {3}]
-//movie = {}
-
 // if no movies, return <div> no search results <div/>
-if(movies === 0) return <div>No Results</div>;
+if(movies === 0) return <div id="no-results">Oops! No results found...Check spelling and try again</div>;
 
     const films = movies.map(movie => {
         return(
@@ -19,7 +16,6 @@ if(movies === 0) return <div>No Results</div>;
     />
         )
       })
-//films = <MovieResult movie={1}/>, <MovieResult/>, <Movie/>
     return (
         <>
         {films}

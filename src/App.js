@@ -2,7 +2,6 @@ import './App.css';
 import React, {useEffect, useState} from 'react';
 import Navbar from './Navbar';
 import Searchbar from './Searchbar';
-import MovieResult from './MovieResult';
 import Watchlist from './Watchlist';
 import Movielist from './Movielist';
 
@@ -26,11 +25,6 @@ const [changePage, setPage] = useState(false)
 function switchPage(){
   setPage(prevState => !prevState)
 }
-
-// useEffect(() => {
-//   let data = localStorage.getItem('saved-movies')
-//   setWatchlist(JSON.parse(data))
-// }, [])
 
 useEffect(()=>{
   localStorage.setItem('saved-movies', JSON.stringify(watchlist))

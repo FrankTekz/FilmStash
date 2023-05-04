@@ -1,12 +1,13 @@
 *{
   box-sizing: border-box;
+  font-family: Nunito;
 }
 
 html, body {
   margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;  
+  padding: 0;  
   background-color: #121212;  
+  font-family: Nunito;
 }
 
 
@@ -17,37 +18,48 @@ html, body {
   height: 50vh;
   width: 100%;
   color: white;
-  font-size: 2.3em;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding-bottom: .5em;
+  justify-content: space-between;
+  position: relative;
 }
 
+#sub-div{
+  /* border: red 3px solid; */
+  padding: 3em;
+  margin-left: 13em;
+}
+
+#head-title{
+  background: rgba(216, 211, 200, 0.271);
+  font-size: 2em;
+  padding: 0em 1em 0em 1em;
+  margin-bottom: 1em;
+}
+
+#switch-list{
+  font-size: 1.5em;
+  width: 10em;
+  text-align: center;
+  background: #121212;
+  border: whitesmoke 2px solid;
+  border-radius: 10px;
+  margin-right: 2em;
+  cursor: pointer;
+}
 
 #search-bar{
   background-color: whitesmoke; 
   border: none;
   width: 70vh;
   height: 2.5em;
-  
-}
-
-
-a, h1{
-  color: whitesmoke;
-  font-size: 2em;
-  background: rgba(216, 211, 200, 0.271);
-  padding: 2vw;
-  border-radius: 5px;
-
-}
+} 
 
 #add-movie{
   align-self: flex-end;
   color: whitesmoke;
   font-size: .8em;
-  width: 8vw;
+  width: 8em;
   margin-right: 4em;
   border-radius: 15px;
   border: whitesmoke 1px solid;
@@ -81,16 +93,15 @@ a, h1{
   padding: .6em 1em .6em 1em;
 }
 
-#add-movie:hover{
+#add-movie:hover, #remove:hover{
   background: rgba(216, 211, 200, 0.271);
   transition: ease-in-out .2s;
 }
 
 a:hover{
-  background: rgba(216, 211, 200, 0.57);
   transition: ease-in-out .2s;
+  cursor: pointer;
 }
-
 
 #results-container, #watchlist-container{
   background: #121212;
@@ -99,12 +110,19 @@ a:hover{
 }
 
 .search-result {
+  font-size: large;
   display: flex;
   border-bottom: 2px solid #4B4B4B;
-  margin: 2em 4em 2em 2em;   
+  margin: 4em 2em 2em 2em;   
 }
 
-
+#no-results{
+  color: rgba(216, 211, 200, 0.57);
+  font-size: 4em;
+  text-align: center;
+  align-items: center;
+  margin-top: 5em;
+}
 
 .search-text {
   width: 60%;
@@ -119,7 +137,7 @@ a:hover{
 
 .poster-img {
   width: 35%; 
-  height: 50vh;
+  height: 30em;
   object-fit: contain;   
   padding-bottom: 2em;
 }
@@ -143,12 +161,7 @@ a:hover{
   text-decoration: underline;
 }
 
-
-
-
-
-
-
+/* search bar CSS*/
 
 .tb {
   display: table;
@@ -167,7 +180,6 @@ input:focus{
 input,
 #search-btn {
   color: #fff;
-  font-family: Nunito;
   padding: 0;
   margin: 0;
   border: 0;
@@ -292,4 +304,4 @@ input[type="text"]::placeholder {
   right: -6px;
   width: 40px;
   background-color: #fff;
-}
+} 
